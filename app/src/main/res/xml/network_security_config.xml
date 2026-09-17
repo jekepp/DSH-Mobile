@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  dsh web 跑在 http://127.0.0.1:3080，是明文 HTTP。
+  targetSdk 28 起 Android 默认禁明文，所以必须为回环地址开个口子。
+  只放行本机，不放行任何外部域名。
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false" />
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="false">127.0.0.1</domain>
+        <domain includeSubdomains="false">localhost</domain>
+    </domain-config>
+</network-security-config>

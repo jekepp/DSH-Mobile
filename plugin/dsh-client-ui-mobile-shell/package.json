@@ -1,0 +1,32 @@
+{
+  "name": "dsh-client-ui-mobile-shell",
+  "version": "0.1.0",
+  "private": true,
+  "description": "DSH Mobile 自研移动端适配客户端插件：单栏布局、浮层抽屉、全屏设置、安全区适配。只作用于窄屏，桌面端分毫不动。",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-layout"
+      ],
+      "platform": "web"
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  },
+  "license": "MIT"
+}

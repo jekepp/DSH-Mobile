@@ -1,0 +1,5 @@
+# dsh-client-ui-mobile-shell 的 bundle patch：
+# 在 dsh-web-app 这一层之后追加一行浏览器侧插件。
+- insert:
+    - id: ui-mobile-shell
+      name: 'dsh-client-ui-mobile-shell'

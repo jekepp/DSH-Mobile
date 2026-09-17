@@ -1,0 +1,31 @@
+# --- 构建产物 ---
+build/
+.gradle/
+*.apk
+*.aab
+*.ap_
+*.dex
+local.properties
+
+# --- 大资产：约 125MB，不进仓库，按 docs/BUILD.md 自行生成 ---
+app/src/main/assets/*.bin
+
+# --- Release 附件（用于上传到 Releases 页面，不入库）---
+release/*.apk
+
+# --- IDE ---
+.idea/
+*.iml
+.DS_Store
+captures/
+
+# --- 其他 ---
+.kotlin/
+*.log
+
+# --- 签名密钥：绝不能入库 ---
+*.jks
+*.keystore
+keystore.properties
+# 例外：debug 签名密钥是公开的固定口令（android），随仓库分发以便 CI / 他人直接构建
+!keystore/debug.keystore

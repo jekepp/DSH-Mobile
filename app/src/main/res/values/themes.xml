@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 浅色底主题；深色版在 values-night/themes.xml -->
+    <style name="Theme.DshMobile" parent="@android:style/Theme.DeviceDefault.Light.NoActionBar">
+        <!-- 全面屏：系统栏透明，内容 edge-to-edge 一直延伸到挖孔区 -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+</resources>
